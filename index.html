@@ -7,7 +7,7 @@
   	<link rel='stylesheet' href='https://unpkg.com/formiojs@latest/dist/formio.full.min.css'>
   	<script src='https://unpkg.com/formiojs@latest/dist/formio.full.min.js'></script>
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  	<script type="text/javascript" language="javascript" src="loginForm.json"></script>
+  	<script type="text/javascript" language="javascript" src="index.json"></script>
   </head>
   <body id="testBody" ng-app="catApp" ng-controller="homeCtrl" role="document">
   
@@ -25,7 +25,7 @@
 		
 		<script type='text/javascript'>
    		 window.onload = function () {
-      		Formio.createForm(document.getElementById('formio'), loginForm); 
+      		Formio.createForm(document.getElementById('formio'), formdata); 
 			console.log('after createForm');
 			//Working
 			//angular.element(document.getElementById('testBody')).scope().login();
