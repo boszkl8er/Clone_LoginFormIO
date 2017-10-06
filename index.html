@@ -1,13 +1,19 @@
 <html>
   <head>
-     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+	<title> Debug title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  
   	<link rel='stylesheet' href='https://unpkg.com/formiojs@latest/dist/formio.full.min.css'>
   	<script src='https://unpkg.com/formiojs@latest/dist/formio.full.min.js'></script>
-  	<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script-->
-  	<script type="text/javascript" language="javascript" src="index.json"></script>
-	<script src="App/Scripts/jquery-1.11.1.min.js"></script>
-        <script src="App/Scripts/angular.min.js"></script>
-        <script src="App/Scripts/angular-route.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script type="text/javascript" language="javascript" src="loginForm.json"></script>
+  </head>
+  <body id="testBody" ng-app="catApp" ng-controller="homeCtrl" role="document">
+  
+		<script src="resource/jquery-1.11.1.min.js"></script>
+		<script src="resource/angular.min.js"></script>
+		<script src="resource/angular-route.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <script src="App/Scripts/adal.js"></script>
         <script src="App/Scripts/adal-angular.js"></script>
@@ -16,15 +22,18 @@
         <script src="App/Scripts/userDataCtrl.js"></script>
         <script src="App/Scripts/catListCtrl.js"></script>
         <script src="App/Scripts/catListSvc.js"></script>
- 	 <script type='text/javascript'>
+		
+		<script type='text/javascript'>
    		 window.onload = function () {
-      		Formio.createForm(document.getElementById('formio'), formdata);
-    	};
-  	</script>
-  </head>
-  <body>
-		<div id='formio'></div>
+      		Formio.createForm(document.getElementById('formio'), loginForm); 
+			console.log('after createForm');
+			//Working
+			//angular.element(document.getElementById('testBody')).scope().login();
+		}
+		</script>
+		
+		<div id='formio'>
+	
+		</div>
   </body>
 </html>
-
-
