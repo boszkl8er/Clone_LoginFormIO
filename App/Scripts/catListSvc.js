@@ -1,6 +1,7 @@
 ﻿'use strict';
 angular.module('catApp')
 .factory('catListSvc', ['$http', function ($http) { 
+	//var apiUrl = 'https://lfdemoapi.portal.azure-api.net';
 	var apiUrl = 'https://sukanya-tst-api.portal.azure-api.net';
     return {
         getItems : function(){
