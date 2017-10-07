@@ -17,7 +17,7 @@ angular.module('catApp', ['ngRoute','AdalAngular'])
     adalProvider.init(
         {
             instance: 'https://login.microsoftonline.com/', 
-            tenant: 'TOGETHER.AT',
+            tenant: 'together.at',
             //clientId: '84a30349-7c6d-42fc-a92e-fa7b774f66e9',
 			//clientSecret: '58DvDFnJQMQK/K2w1KuqnjVGws1HtE4SfP8NnJX0iWc=',
 			clientId: '0a07a77d-ee2e-477e-93ca-fd7f59421237',
