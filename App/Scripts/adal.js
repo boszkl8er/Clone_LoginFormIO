@@ -771,14 +771,16 @@ AuthenticationContext.prototype._extractIdToken = function (encodedIdToken) {
 	console.log('encodedIdTokan = '+encodedIdToken + '\n');
     // id token will be decoded to get the username
     var decodedToken = this._decodeJwt(encodedIdToken);
-	console.log('decodedToken = '+decodedToken);
+	console.log('decodedToken = '+decodedToken + '\n');
     if (!decodedToken) {
         return null;
     }
 
     try {
         var base64IdToken = decodedToken.JWSPayload;
+		console.log('base64IdToken = '+base64IdToken+'\n');
         var base64Decoded = this._base64DecodeStringUrlSafe(base64IdToken);
+		console.log('base64Decoded = '+base64Decoded+'\n');
         if (!base64Decoded) {
             this._logstatus('The returned id_token could not be base64 url safe decoded.');
             return null;
