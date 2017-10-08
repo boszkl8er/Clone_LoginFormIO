@@ -48,6 +48,7 @@ if (typeof module !== 'undefined' && module.exports) {
                 _oauthData.userName = user.userName;
                 _oauthData.profile = user.profile;
                 _oauthData.loginError = _adal.getLoginError();
+				_oauthData.testDebug = token;//debug
             };
 
             this.init = function (configOptions, httpProvider) {
