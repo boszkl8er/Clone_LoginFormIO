@@ -194,6 +194,8 @@ if (typeof module !== 'undefined' && module.exports) {
                 $rootScope.$on('$locationChangeStart', locationChangeHandler);
 
                 updateDataFromCache(_adal.config.loginResource);
+				console.log('---------------------------------------------');
+				console.log('Call userInfor1');
                 $rootScope.userInfo = _oauthData;
 
                 return {
