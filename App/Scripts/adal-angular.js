@@ -196,7 +196,7 @@ if (typeof module !== 'undefined' && module.exports) {
                 updateDataFromCache(_adal.config.loginResource);
 				console.log('==============================================');
 				console.log('Call userInfor1');
-				console.log('_oauthData');
+				console.log('_oauthData = '+_oauthData);
                 $rootScope.userInfo = _oauthData;
 
                 return {
